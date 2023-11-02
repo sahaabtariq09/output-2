@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Area Converter (Marla to Square Feet)</title>
+</head>
+<body>
+    <h1>Area Converter (Marla to Square Feet)</h1>
+    <form>
+        <label for="marla">Enter Area in Marla:</label>
+        <input type="number" id="marla" placeholder="Enter Marla" required>
+        <input type="button" value="Convert" onclick="convertAreaMarlaToSqFeet()">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function convertAreaMarlaToSqFeet() {
+            const marla = parseFloat(document.getElementById("marla").value);
+            const sqFeet = marla * 272.25; // 1 Marla = 272.25 Square Feet
+            document.getElementById("result").textContent = `Area in Square Feet: ${sqFeet.toFixed(2)} sq. ft`;
+        }
+    </script>
+</body>
+</html>
